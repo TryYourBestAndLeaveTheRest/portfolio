@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sherifdeen Raji - Backend Developer</title>
+    <meta name="description" content="Sherifdeen Raji - Professional backend developer specializing in Python (FastAPI, Django, Flask) and JavaScript (Node.js, Express). Building scalable APIs and microservices.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="nav-logo">&lt;TheKuriousDev /&gt;</span>
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="nav-links desktop-nav">
+                <a href="#home" class="nav-link" data-testid="nav-link-home">Home</a>
+                <a href="#about" class="nav-link" data-testid="nav-link-about">About</a>
+                <a href="#skills" class="nav-link" data-testid="nav-link-skills">Skills</a>
+                <a href="#projects" class="nav-link" data-testid="nav-link-projects">Projects</a>
+                <a href="#contact" class="nav-link" data-testid="nav-link-contact">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" data-testid="button-mobile-menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#home" class="nav-link mobile-link" data-testid="nav-link-mobile-home">Home</a>
+            <a href="#about" class="nav-link mobile-link" data-testid="nav-link-mobile-about">About</a>
+            <a href="#skills" class="nav-link mobile-link" data-testid="nav-link-mobile-skills">Skills</a>
+            <a href="#projects" class="nav-link mobile-link" data-testid="nav-link-mobile-projects">Projects</a>
+            <a href="#contact" class="nav-link mobile-link" data-testid="nav-link-mobile-contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-text">
+                            <p class="greeting" data-testid="text-greeting">Hi, my name is</p>
+                            <h1 class="hero-name" data-testid="text-name">
+                                Sherifdeen Raji<span class="typing-cursor"></span>
+                            </h1>
+                            <h2 class="hero-tagline" data-testid="text-tagline">I build backend systems.</h2>
+                        </div>
+                        <p class="hero-description" data-testid="text-description">
+                            I'm a backend developer specializing in building scalable APIs and microservices with 
+                            Python and JavaScript. Currently focused on creating robust solutions using FastAPI, 
+                            Django, and Node.js.
+                        </p>
+                        <div class="hero-buttons">
+                            <button class="btn btn-outline" id="viewWorkBtn" data-testid="button-view-work">
+                                View My Work
+                            </button>
+                            <button class="btn btn-primary" id="downloadResumeBtn" data-testid="button-download-resume">
+                                Download Resume
+                            </button>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/TryYourBestAndLeaveTheRest" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="link-github">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/kuriousdev/" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="link-linkedin">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            </a>
+                            <a href="mailto:sherifdeenraji96@gmail.com" class="social-link" data-testid="link-email">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </a>
+                            <a href="https://x.com/_ayinla__" target="_blank" rel="noopener noreferrer" class="social-link" data-testid="link-twitter">
+                                <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600" 
+                             alt="Professional developer workspace" 
+                             class="hero-img" 
+                             data-testid="img-hero">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title" data-testid="text-about-title">
+                    <span class="section-number">01.</span> About Me
+                </h2>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p class="about-text" data-testid="text-about-paragraph-1">
+                            Hello! I'm Sherifdeen, a passionate backend developer with over 3 years of experience 
+                            building scalable web applications and APIs. My journey started with Python, and 
+                            I've since expanded my expertise to include modern JavaScript technologies.
+                        </p>
+                        <p class="about-text" data-testid="text-about-paragraph-2">
+                            I specialize in creating robust, efficient backend systems using frameworks like 
+                            FastAPI for high-performance APIs, Django for full-featured web applications, and 
+                            Node.js for real-time services. I'm particularly interested in microservices 
+                            architecture and cloud-native development.
+                        </p>
+                        <p class="about-text" data-testid="text-about-paragraph-3">
+                            When I'm not coding, I contribute to open-source projects, write technical blogs, 
+                            and explore emerging technologies in the backend development space.
+                        </p>
+                        <div class="technologies">
+                            <h3 class="tech-title" data-testid="text-technologies-title">Technologies I work with:</h3>
+                            <div class="tech-list">
+                                <div class="tech-item" data-testid="tech-item-0">
+                                    <span class="tech-arrow">→</span>
+                                    <span>Python (FastAPI, Django, Flask)</span>
+                                </div>
+                                <div class="tech-item" data-testid="tech-item-1">
+                                    <span class="tech-arrow">→</span>
+                                    <span>JavaScript (Node.js, Express)</span>
+                                </div>
+                                <div class="tech-item" data-testid="tech-item-2">
+                                    <span class="tech-arrow">→</span>
+                                    <span>PostgreSQL & MongoDB</span>
+                                </div>
+                                <div class="tech-item" data-testid="tech-item-3">
+                                    <span class="tech-arrow">→</span>
+                                    <span>Docker & Kubernetes</span>
+                                </div>
+                                <div class="tech-item" data-testid="tech-item-4">
+                                    <span class="tech-arrow">→</span>
+                                    <span>AWS & Google Cloud</span>
+                                </div>
+                                <div class="tech-item" data-testid="tech-item-5">
+                                    <span class="tech-arrow">→</span>
+                                    <span>Redis & RabbitMQ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=600" 
+                             alt="Modern office setup with multiple monitors" 
+                             class="about-img"
+                             data-testid="img-about">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <h2 class="section-title" data-testid="text-skills-title">
+                    <span class="section-number">02.</span> Technical Skills
+                </h2>
+                
+                <!-- Python Frameworks -->
+                <div class="skills-category">
+                    <h3 class="category-title" data-testid="text-python-title">
+                        <span class="category-icon">🐍</span>
+                        Python Frameworks
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-testid="card-python-0">
+                            <div class="skill-header">
+                                <span class="skill-icon">🚀</span>
+                                <h4 class="skill-name">FastAPI</h4>
+                            </div>
+                            <p class="skill-description">High-performance async API framework with automatic OpenAPI documentation.</p>
+                            <div class="skill-tags">
+                                <span class="tag" data-testid="badge-async-await">Async/Await</span>
+                                <span class="tag" data-testid="badge-pydantic">Pydantic</span>
+                                <span class="tag" data-testid="badge-openapi">OpenAPI</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card" data-testid="card-python-1">
+                            <div class="skill-header">
+                                <span class="skill-icon">⚙️</span>
+                                <h4 class="skill-name">Django</h4>
+                            </div>
+                            <p class="skill-description">Full-featured web framework with ORM, admin interface, and security features.</p>
+                            <div class="skill-tags">
+                                <span class="tag" data-testid="badge-orm">ORM</span>
+                                <span class="tag" data-testid="badge-drf">DRF</span>
+                                <span class="tag" data-testid="badge-admin">Admin</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card" data-testid="card-python-2">
+                            <div class="skill-header">
+                                <span class="skill-icon">🌶️</span>
+                                <h4 class="skill-name">Flask</h4>
+                            </div>
+                            <p class="skill-description">Lightweight and flexible microframework for building web applications.</p>
+                            <div class="skill-tags">
+                                <span class="tag" data-testid="badge-blueprints">Blueprints</span>
+                                <span class="tag" data-testid="badge-sqlalchemy">SQLAlchemy</span>
+                                <span class="tag" data-testid="badge-jinja2">Jinja2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JavaScript Technologies -->
+                <div class="skills-category">
+                    <h3 class="category-title" data-testid="text-javascript-title">
+                        <span class="category-icon">🟨</span>
+                        JavaScript Technologies
+                    </h3>
+                    <div class="skills-grid js-grid">
+                        <div class="skill-card" data-testid="card-javascript-0">
+                            <div class="skill-header">
+                                <span class="skill-icon">🟢</span>
+                                <h4 class="skill-name">Node.js</h4>
+                            </div>
+                            <p class="skill-description">Runtime environment for building scalable server-side applications.</p>
+                            <div class="skill-tags">
+                                <span class="tag" data-testid="badge-event-driven">Event-driven</span>
+                                <span class="tag" data-testid="badge-non-blocking-i-o">Non-blocking I/O</span>
+                                <span class="tag" data-testid="badge-npm-yarn">npm/yarn</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-card" data-testid="card-javascript-1">
+                            <div class="skill-header">
+                                <span class="skill-icon">🌐</span>
+                                <h4 class="skill-name">Express.js</h4>
+                            </div>
+                            <p class="skill-description">Fast, minimalist web framework for Node.js applications and APIs.</p>
+                            <div class="skill-tags">
+                                <span class="tag" data-testid="badge-middleware">Middleware</span>
+                                <span class="tag" data-testid="badge-rest-apis">REST APIs</span>
+                                <span class="tag" data-testid="badge-routing">Routing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skills-category">
+                    <h3 class="category-title" data-testid="text-tools-title">
+                        <span class="category-icon">🛠️</span>
+                        Tools & Technologies
+                    </h3>
+                    <div class="tools-grid">
+                        <div class="tool-card" data-testid="card-tool-0">
+                            <span class="tool-icon">🐳</span>
+                            <span class="tool-name">Docker</span>
+                        </div>
+                        <div class="tool-card" data-testid="card-tool-1">
+                            <span class="tool-icon">🐘</span>
+                            <span class="tool-name">PostgreSQL</span>
+                        </div>
+                        <div class="tool-card" data-testid="card-tool-2">
+                            <span class="tool-icon">🍃</span>
+                            <span class="tool-name">MongoDB</span>
+                        </div>
+                        <div class="tool-card" data-testid="card-tool-3">
+                            <span class="tool-icon">☁️</span>
+                            <span class="tool-name">AWS</span>
+                        </div>
+                        <div class="tool-card" data-testid="card-tool-4">
+                            <span class="tool-icon">🔴</span>
+                            <span class="tool-name">Redis</span>
+                        </div>
+                        <div class="tool-card" data-testid="card-tool-5">
+                            <span class="tool-icon">📦</span>
+                            <span class="tool-name">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2 class="section-title" data-testid="text-projects-title">
+                    <span class="section-number">03.</span> Featured Projects
+                </h2>
+                
+                <div class="featured-projects">
+                    <!-- Project 1 -->
+                    <div class="project-card featured-project" data-testid="card-featured-project-0">
+                        <div class="project-grid">
+                            <div class="project-content">
+                                <p class="project-label">Featured Project</p>
+                                <h3 class="project-title" data-testid="text-project-title-0">E-Commerce API Platform</h3>
+                                <p class="project-description" data-testid="text-project-description-0">
+                                    A scalable microservices-based e-commerce platform built with FastAPI and PostgreSQL. Features include user authentication, product catalog, order management, and payment processing with comprehensive API documentation.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag" data-testid="badge-project-fastapi">FastAPI</span>
+                                    <span class="tag" data-testid="badge-project-postgresql">PostgreSQL</span>
+                                    <span class="tag" data-testid="badge-project-redis">Redis</span>
+                                    <span class="tag" data-testid="badge-project-docker">Docker</span>
+                                    <span class="tag" data-testid="badge-project-celery">Celery</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link" data-testid="button-project-github-0">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                        Code
+                                    </a>
+                                    <a href="#" class="project-link" data-testid="button-project-demo-0">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                                     alt="E-Commerce API Platform screenshot" 
+                                     class="project-img"
+                                     data-testid="img-project-0">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card featured-project reverse" data-testid="card-featured-project-1">
+                        <div class="project-grid">
+                            <div class="project-content">
+                                <p class="project-label">Featured Project</p>
+                                <h3 class="project-title" data-testid="text-project-title-1">Real-Time Chat Service</h3>
+                                <p class="project-description" data-testid="text-project-description-1">
+                                    A high-performance real-time messaging service built with Node.js and Socket.io. Supports multiple chat rooms, file sharing, user presence, and message history with MongoDB persistence.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag" data-testid="badge-project-node.js">Node.js</span>
+                                    <span class="tag" data-testid="badge-project-express">Express</span>
+                                    <span class="tag" data-testid="badge-project-socket.io">Socket.io</span>
+                                    <span class="tag" data-testid="badge-project-mongodb">MongoDB</span>
+                                    <span class="tag" data-testid="badge-project-jwt">JWT</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link" data-testid="button-project-github-1">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                        Code
+                                    </a>
+                                    <a href="#" class="project-link" data-testid="button-project-demo-1">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                                     alt="Real-Time Chat Service screenshot" 
+                                     class="project-img"
+                                     data-testid="img-project-1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card featured-project" data-testid="card-featured-project-2">
+                        <div class="project-grid">
+                            <div class="project-content">
+                                <p class="project-label">Featured Project</p>
+                                <h3 class="project-title" data-testid="text-project-title-2">Content Management System</h3>
+                                <p class="project-description" data-testid="text-project-description-2">
+                                    A flexible CMS built with Django and Django REST Framework. Features include role-based permissions, content versioning, media management, and a RESTful API for headless CMS functionality.
+                                </p>
+                                <div class="project-tags">
+                                    <span class="tag" data-testid="badge-project-django">Django</span>
+                                    <span class="tag" data-testid="badge-project-drf">DRF</span>
+                                    <span class="tag" data-testid="badge-project-postgresql">PostgreSQL</span>
+                                    <span class="tag" data-testid="badge-project-celery">Celery</span>
+                                    <span class="tag" data-testid="badge-project-aws-s3">AWS S3</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="project-link" data-testid="button-project-github-2">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                        Code
+                                    </a>
+                                    <a href="#" class="project-link" data-testid="button-project-demo-2">
+                                        <svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                        Live Demo
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <img src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=400" 
+                                     alt="Content Management System screenshot" 
+                                     class="project-img"
+                                     data-testid="img-project-2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Projects -->
+                <div class="other-projects">
+                    <h3 class="other-projects-title" data-testid="text-other-projects-title">Other Noteworthy Projects</h3>
+                    <div class="other-projects-grid">
+                        <div class="other-project-card" data-testid="card-other-project-0">
+                            <div class="project-header">
+                                <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z"/></svg>
+                                <div class="project-actions">
+                                    <a href="#" class="action-link" data-testid="button-other-github-0">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#" class="action-link" data-testid="button-other-demo-0">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h4 class="other-project-title" data-testid="text-other-title-0">API Gateway Service</h4>
+                            <p class="other-project-description" data-testid="text-other-description-0">
+                                Microservices API gateway with rate limiting, authentication, and load balancing.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag" data-testid="badge-other-flask">Flask</span>
+                                <span class="tag" data-testid="badge-other-redis">Redis</span>
+                                <span class="tag" data-testid="badge-other-docker">Docker</span>
+                            </div>
+                        </div>
+
+                        <div class="other-project-card" data-testid="card-other-project-1">
+                            <div class="project-header">
+                                <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z"/></svg>
+                                <div class="project-actions">
+                                    <a href="#" class="action-link" data-testid="button-other-github-1">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#" class="action-link" data-testid="button-other-demo-1">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h4 class="other-project-title" data-testid="text-other-title-1">Task Queue System</h4>
+                            <p class="other-project-description" data-testid="text-other-description-1">
+                                Distributed task processing system with job scheduling and monitoring dashboard.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag" data-testid="badge-other-django">Django</span>
+                                <span class="tag" data-testid="badge-other-celery">Celery</span>
+                                <span class="tag" data-testid="badge-other-rabbitmq">RabbitMQ</span>
+                            </div>
+                        </div>
+
+                        <div class="other-project-card" data-testid="card-other-project-2">
+                            <div class="project-header">
+                                <svg class="folder-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2h-8l-2-2z"/></svg>
+                                <div class="project-actions">
+                                    <a href="#" class="action-link" data-testid="button-other-github-2">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    </a>
+                                    <a href="#" class="action-link" data-testid="button-other-demo-2">
+                                        <svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                            <h4 class="other-project-title" data-testid="text-other-title-2">GraphQL Analytics API</h4>
+                            <p class="other-project-description" data-testid="text-other-description-2">
+                                Analytics service with GraphQL interface for flexible data querying and real-time insights.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag" data-testid="badge-other-node.js">Node.js</span>
+                                <span class="tag" data-testid="badge-other-graphql">GraphQL</span>
+                                <span class="tag" data-testid="badge-other-mongodb">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-header">
+                    <h2 class="section-title" data-testid="text-contact-title">
+                        <span class="section-number">04.</span> Get In Touch
+                    </h2>
+                    <p class="contact-description" data-testid="text-contact-description">
+                        I'm always interested in discussing new opportunities, whether it's a backend development 
+                        role, consulting project, or just a chat about technology. My inbox is always open!
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form" data-testid="form-contact">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required data-testid="input-name">
+                                <div class="form-error" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required data-testid="input-email">
+                                <div class="form-error" id="emailError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-input" placeholder="What's this about?" required data-testid="input-subject">
+                                <div class="form-error" id="subjectError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Tell me about your project or opportunity..." required data-testid="textarea-message"></textarea>
+                                <div class="form-error" id="messageError"></div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary form-submit" data-testid="button-send-message">
+                                <span class="submit-text">Send Message</span>
+                                <span class="submit-loading" style="display: none;">Sending...</span>
+                            </button>
+                        </form>
+
+                        <!-- Success Message -->
+                        <div id="successMessage" class="success-message" style="display: none;">
+                            <div class="success-content">
+                                <div class="success-icon">✅</div>
+                                <h3 class="success-title">Thank you!</h3>
+                                <p class="success-text">Your message has been sent successfully. I'll get back to you soon!</p>
+                                <button class="btn btn-primary" id="sendAnotherBtn" data-testid="button-send-another">
+                                    Send Another Message
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="contact-info">
+                        <div class="contact-info-section">
+                            <h3 class="contact-info-title" data-testid="text-contact-info-title">Let's Connect</h3>
+                            <div class="contact-methods">
+                                <div class="contact-method">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                    <a href="mailto:sherifdeenraji96@gmail.com" class="contact-link" data-testid="link-contact-email">
+                                        sherifdeenraji96@gmail.com
+                                    </a>
+                                </div>
+                                <div class="contact-method">
+                                    <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                                    <a href="tel:+2348118448441" class="contact-link" data-testid="link-contact-phone">
+                                         (+234) 8118448441 
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-section">
+                            <h3 class="contact-info-title" data-testid="text-response-time-title">Response Time</h3>
+                            <p class="contact-info-text" data-testid="text-response-time">
+                                I typically respond to messages within 24-48 hours. For urgent inquiries, 
+                                feel free to reach out via email or LinkedIn for a faster response.
+                            </p>
+                        </div>
+
+                        <div class="contact-info-section">
+                            <h3 class="contact-info-title" data-testid="text-opportunities-title">What I'm Looking For</h3>
+                            <ul class="opportunities-list">
+                                <li class="opportunity-item" data-testid="text-opportunity-1">
+                                    <span class="opportunity-bullet">•</span>
+                                    <span>Backend development opportunities</span>
+                                </li>
+                                <li class="opportunity-item" data-testid="text-opportunity-2">
+                                    <span class="opportunity-bullet">•</span>
+                                    <span>Consulting and freelance projects</span>
+                                </li>
+                                <li class="opportunity-item" data-testid="text-opportunity-3">
+                                    <span class="opportunity-bullet">•</span>
+                                    <span>Technical discussions and collaborations</span>
+                                </li>
+                                <li class="opportunity-item" data-testid="text-opportunity-4">
+                                    <span class="opportunity-bullet">•</span>
+                                    <span>Open source contributions</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text" data-testid="text-footer-built">
+                    Built with passion and Python/JavaScript
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/TryYourBestAndLeaveTheRest" target="_blank" rel="noopener noreferrer" class="footer-link" data-testid="link-footer-github">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kuriousdev/" target="_blank" rel="noopener noreferrer" class="footer-link" data-testid="link-footer-linkedin">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://x.com/_ayinla__" target="_blank" rel="noopener noreferrer" class="footer-link" data-testid="link-footer-twitter">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                    </a>
+                    <a href="mailto:sherifdeenraji96@gmail.com" class="footer-link" data-testid="link-footer-email">
+                        <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <p class="copyright" data-testid="text-footer-copyright">
+                        © <span id="date"></span> TheKuriousDev. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Messages -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- JavaScript -->
+     <script>
+        document.getElementById('date').innerHTML = new Date().getFullYear()
+     </script>
+    <script src="/script.js"></script>
+</body>
+</html>
