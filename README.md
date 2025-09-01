@@ -18,9 +18,9 @@ A professional portfolio website built with vanilla HTML, CSS, and JavaScript, f
 
 ### Installation
 
-1. **Extract the archive**:
+1. **Clone the repository**:
    ```bash
-   tar -xzf portfolio-website.tar.gz
+   git clone https://github.com/TryYourBestAndLeaveTheRest/portfolio.git
    cd portfolio-website
    ```
 
