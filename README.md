@@ -1,4 +1,4 @@
-# Alex Chen - Backend Developer Portfolio
+# Raji Sherifdeen Ayinla (KuriousDev) - Backend Developer Portfolio
 
 A professional portfolio website built with vanilla HTML, CSS, and JavaScript, featuring a Node.js/Express backend for the contact form.
 
@@ -15,7 +15,6 @@ A professional portfolio website built with vanilla HTML, CSS, and JavaScript, f
 
 ### Prerequisites
 - Node.js 18+ installed on your system
-- PostgreSQL database (optional - uses in-memory storage by default)
 
 ### Installation
 
